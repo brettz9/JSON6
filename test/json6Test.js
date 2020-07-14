@@ -1,5 +1,8 @@
 'use strict';
 const parse = (str) => {
+	if (str === '/**/' || str === '//') {
+		return eval(str);
+	}
 	return eval(`(${str})`);
 };
 
