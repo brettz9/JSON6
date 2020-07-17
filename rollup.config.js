@@ -1,12 +1,11 @@
-'use strict';
-const {nodeResolve} = require('@rollup/plugin-node-resolve');
-const commonjs = require('@rollup/plugin-commonjs');
-const {babel} = require('@rollup/plugin-babel');
-const strip = require('@rollup/plugin-strip');
-const terser = require('rollup-plugin-terser').terser;
-const pkg = require('./package.json');
+import {nodeResolve} from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
+import {babel} from '@rollup/plugin-babel';
+import strip from '@rollup/plugin-strip';
+import {terser} from 'rollup-plugin-terser';
+import pkg from './package.json';
 
-module.exports = [
+export default [
 	// ES5 Non-minified
 	{
 		input: 'build/es5.js',

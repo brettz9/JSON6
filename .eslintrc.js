@@ -14,6 +14,11 @@ module.exports = {
 			expect: 'readonly'
 		},
 		env: {mocha: true}
+	}, {
+		files: 'rollup.config.js',
+		parserOptions: {
+			sourceType: 'module'
+		}
 	}],
 	globals: {
 		Atomics: 'readonly',
