@@ -15,7 +15,7 @@ module.exports = {
 		},
 		env: {mocha: true}
 	}, {
-		files: 'rollup.config.js',
+		files: 'rollup.config.mjs',
 		parserOptions: {
 			sourceType: 'module'
 		}
