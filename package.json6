@@ -16,7 +16,7 @@
     module: "dist/index.mjs",
     main: "lib/json6.js",
     bin: "lib/cli.js",
-    browser: "dist/index.js",
+    browser: "./dist/index.js",
     files: [
         "dist/",
         "lib/"
