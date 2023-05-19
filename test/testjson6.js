@@ -1,5 +1,6 @@
 'use strict';
 // var JSON6 = require( "./json6.js" );
+const { expect } = require( 'chai' );
 const JSON6 = require( '..' );
 
 describe('JSON streaming', function () {

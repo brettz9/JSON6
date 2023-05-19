@@ -2,6 +2,7 @@
 const JSON6 = require( '..' );
 const fs = require( 'fs' );
 const path = require( 'path' );
+const { expect } = require( 'chai' );
 
 const buf = fs.readFileSync( path.join(__dirname, 'stream.json6') );
 const msg = buf.toString( 'utf8' );

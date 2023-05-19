@@ -1,4 +1,5 @@
 'use strict';
+const { expect } = require( 'chai' );
 const JSON6 = require( ".." );
 
 describe('JSON6 stringify', function () {
@@ -48,6 +49,6 @@ describe('JSON6 stringify', function () {
 		expect( stringifier.stringify( obj ) )
 			.to.equal( '{f:false,t:true,v:NaN,w:Infinity,x:null,y:"123",z:1}' );
 	} );
-        
-        
+
+
 } );

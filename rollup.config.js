@@ -1,9 +1,9 @@
 'use strict';
-const nodeResolve = require('@rollup/plugin-node-resolve');
-const commonjs = require('@rollup/plugin-commonjs');
-const {babel} = require('@rollup/plugin-babel');
-const strip = require('@rollup/plugin-strip');
-const terser = require('rollup-plugin-terser').terser;
+const nodeResolve = require('@rollup/plugin-node-resolve').default;
+const commonjs = require('@rollup/plugin-commonjs').default;
+const { babel } = require('@rollup/plugin-babel');
+const strip = require('@rollup/plugin-strip').default;
+const { terser } = require('rollup-plugin-terser');
 const pkg = require('./package.json');
 
 module.exports = [
@@ -19,7 +19,7 @@ module.exports = [
 			strip({functions: ['log']}),
 			nodeResolve(),
 			commonjs(),
-			babel(),
+			babel({ babelHelpers: 'bundled' }),
 		],
 	},
 	// ES5 Minified
@@ -34,7 +34,7 @@ module.exports = [
 			strip({functions: ['log']}),
 			nodeResolve(),
 			commonjs(),
-			babel(),
+			babel({ babelHelpers: 'bundled' }),
 			terser(),
 		],
 	},
@@ -49,7 +49,7 @@ module.exports = [
 			strip({functions: ['log']}),
 			nodeResolve(),
 			commonjs(),
-			babel(),
+			babel({ babelHelpers: 'bundled' }),
 		],
 	},
 	// ES6 Modules Minified
@@ -64,7 +64,7 @@ module.exports = [
 			nodeResolve(),
 			commonjs(),
 			terser(),
-			babel(),
+			babel({ babelHelpers: 'bundled' }),
 		],
 	},
 ];
